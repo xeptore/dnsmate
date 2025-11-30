@@ -7,7 +7,7 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     $script = if ($PSCommandPath) {
         "& { & `'$($PSCommandPath)`' }"
     } else {
-        "&([ScriptBlock]::Create((irm https://github.com/xeptore/dnsmate/releases/latest/download/dnsmate.ps1)))"
+        "&([ScriptBlock]::Create((irm https://raw.githubusercontent.com/xeptore/dnsmate/refs/heads/main/dnsmate.ps1)))"
     }
 
     $powershellCmd = if (Get-Command pwsh -ErrorAction SilentlyContinue) { "pwsh" } else { "powershell" }
