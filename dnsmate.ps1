@@ -126,6 +126,8 @@ $btnApply.Add_Click({
             }
         }
 
+        Clear-DnsClientCache
+
         $lblStatus.Text = @"
 DNS settings applied successfully!
 Provider: $selectedProvider
